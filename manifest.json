@@ -1,0 +1,11 @@
+{
+    "name": "Takealot-Graphs",
+    "version":"0.01",
+    "description":"Takealot graphs",
+    "content_scripts":[{
+        "matches":["https://www.takealot.com/wishlist/*/detail/*"],
+        "js": ["contentScript.js", "jquery-3.6.0.min.js"],
+        "run_at":"document_idle"
+    }],
+    "manifest_version": 2
+}
