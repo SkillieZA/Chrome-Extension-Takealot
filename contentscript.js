@@ -1,3 +1,5 @@
+import * as jquery from "jquery-3.6.0.min.js";
+
 // I don't know how to detect when the page have loaded, so just waiting 5 seconds
 setTimeout(function(){
 
