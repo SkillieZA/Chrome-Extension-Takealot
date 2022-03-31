@@ -1,10 +1,29 @@
-//import * as jquery from "jquery-3.6.0.min.js";
+var current_href = "";
+setInterval(function(){
+//console.log("cached:  " + current_href);
+//console.log("current: " + location.href);
+    if(current_href !== location.href){
+        console.log(current_href + " -> " + location.href);
+        insertGraphs();
+        current_href = location.href;
+    }else{
+        // Do ...
+    }
+},4000);
 
-// I don't know how to detect when the page have loaded, so just waiting 5 seconds
-setTimeout(function(){
-
+function insertGraphs(){
+    console.log("Inserting Graphs");
     // Get a list of items
-    var items = document.getElementsByClassName("grid-x grid-padding-x");
+    var items;
+    
+    if (location.href == "https://www.takealot.com/cart"){
+        // TODO: Get it to work on the cart page.
+        items = document.getElementsByClassName("cart-item-container-module_item_3Vkqc transition-height-module_item_1ikpj");
+    } 
+    else
+    {
+        items = document.getElementsByClassName("grid-x grid-padding-x");
+    }
     
     for (let index = 1; index < items.length; index++) {
         const item = items[index];
@@ -29,7 +48,7 @@ setTimeout(function(){
             item.appendChild(img);
         }
     }
- }, 5000);
+ }
 
 
 

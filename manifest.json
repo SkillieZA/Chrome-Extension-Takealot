@@ -3,9 +3,8 @@
     "version":"0.01",
     "description":"Takealot graphs",
     "content_scripts":[{
-        "matches":["https://www.takealot.com/wishlist/*/detail/*"],
-        "js": ["contentScript.js", "jquery-3.6.0.min.js"],
-        "run_at":"document_idle"
+        "matches":["https://www.takealot.com/wishlist/*/detail/*", "https://www.takealot.com/cart"],
+        "js": ["jquery-3.6.0.min.js", "contentScript.js"]
     }],
-    "manifest_version": 2
+    "manifest_version": 3
 }
